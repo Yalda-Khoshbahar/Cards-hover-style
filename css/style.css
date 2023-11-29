@@ -8,10 +8,11 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-section {
+.cards-box {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -25,6 +26,7 @@ section {
     text-align: center;
     display: flex;
     flex-direction: column;
+    flex-grow: 0.01;
     align-items: center;
     padding: 15px 20px 0;
     border-radius: 8px;
@@ -40,20 +42,23 @@ section {
 
 .card div {
     transition: 0.5s ease-in-out;
+    overflow: hidden;
 }
 
 .card h3 {
     margin: 10px 0 20px;
 }
 
+:is(p, a) {
+    /* display: none; */
+    transition: all 0.5s ease;
+}
+
 .card p {
-    display: none;
-    transition: 0.5s ease-in-out;
     margin-bottom: 10px;
 }
 
 .card a {
-    display: none;
     text-decoration: none;
     background-color: #2525E7;
     color: white;
